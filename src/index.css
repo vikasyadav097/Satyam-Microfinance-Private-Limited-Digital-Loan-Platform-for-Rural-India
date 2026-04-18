@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-brand-primary: #1E3A8A; /* Deep Blue */
+  --color-brand-secondary: #3b82f6; /* Blue 500 */
+  --color-accent: #10B981; /* Emerald 500 */
+  --color-bg-main: #F8FAFC;
+  --color-border-subtle: #E2E8F0;
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg-main)] text-[var(--color-text-main)] font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight text-[var(--color-brand-primary)];
+  }
+}
+
+.clean-card {
+  @apply bg-white p-6 md:p-8 rounded-xl border border-[var(--color-border-subtle)] shadow-[0_4px_12px_rgba(0,0,0,0.02)];
+}
+
+.btn-clean-primary {
+  @apply bg-[var(--color-brand-primary)] text-white px-7 py-3.5 rounded-lg font-bold transition-all hover:bg-blue-800 active:scale-[0.98];
+}
+
+.btn-clean-secondary {
+  @apply bg-white text-[var(--color-brand-primary)] border border-[var(--color-brand-primary)] px-7 py-3.5 rounded-lg font-bold transition-all hover:bg-blue-50 active:scale-[0.98];
+}
